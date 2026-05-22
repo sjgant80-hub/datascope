@@ -105,12 +105,18 @@ h1,h2,h3,h4,h5,h6 { line-height: 1.2; font-weight: 800; }
 .feature-card p { font-size:0.9rem;color:var(--text-mid);line-height:1.6; }
 
 /* ═══════════ USE CASES ═══════════ */
-.cases-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:20px; }
+.cases-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:20px; }
+@media(max-width:900px){ .cases-grid { grid-template-columns:repeat(2,1fr); } }
 .case-card { background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px;transition:border 0.2s; }
 .case-card:hover { border-color:var(--accent); }
 .case-tag { display:inline-block;padding:3px 10px;border-radius:12px;font-size:0.72rem;font-weight:700;letter-spacing:0.05em;margin-bottom:12px; }
 .case-tag.creator { background:rgba(59,130,246,0.2);color:#60a5fa; }
+.case-tag.research { background:rgba(139,92,246,0.2);color:#a78bfa; }
+.case-tag.trend { background:rgba(236,72,153,0.2);color:#f472b6; }
+.case-tag.market { background:rgba(16,185,129,0.2);color:#34d399; }
 .case-tag.investor { background:rgba(16,185,129,0.2);color:#34d399; }
+.case-tag.signal { background:rgba(251,191,36,0.2);color:#fbbf24; }
+.case-tag.enterprise { background:rgba(99,102,241,0.2);color:#818cf8; }
 .case-tag.agency { background:rgba(245,158,11,0.2);color:#fbbf24; }
 .case-tag.journalist { background:rgba(239,68,68,0.2);color:#f87171; }
 .case-card h3 { font-size:1.05rem;font-weight:700;color:white;margin-bottom:8px; }
@@ -342,6 +348,41 @@ h1,h2,h3,h4,h5,h6 { line-height: 1.2; font-weight: 800; }
         <div class="case-tag journalist">JOURNALIST</div>
         <h3>Niche Journalist</h3>
         <p>Breaking news alerts with urgency scoring. Source aggregation across 50+ outlets. Auto-generated article drafts. Fact-check prompts. Deadline-aware content pipeline.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag creator">CREATOR</div>
+        <h3>Creator Intelligence</h3>
+        <p>Full content pipeline — ideation to publish. What to create, when to post, which format wins. Audience analysis, competitor tracking, engagement prediction. Multi-platform, multi-lingual.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag research">RESEARCH</div>
+        <h3>Deep Research</h3>
+        <p>Academic and industry research aggregation. Cross-source synthesis. Citation tracking. Emerging paper alerts. Patent monitoring. White paper auto-generation from raw data feeds.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag trend">TREND MONITORING</div>
+        <h3>Trend Monitoring</h3>
+        <p>Real-time trend velocity across your niche. Topic lifecycle tracking — emerging, peaking, declining. Hashtag heatmaps. Social sentiment scoring. Early-mover alerts before saturation.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag market">MARKET INTEL</div>
+        <h3>Market Intelligence</h3>
+        <p>Competitive landscape mapping. Pricing intelligence. Market-entry analysis. Supply chain monitoring. Consumer sentiment shifts. Regulatory change tracking. Full market picture, one dashboard.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag signal">SIGNAL DETECTION</div>
+        <h3>Signal Detection</h3>
+        <p>Noise reduction engine. Cuts through information overload to surface what actually matters. Anomaly detection across data feeds. Pattern recognition. Weak-signal amplification before consensus forms.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag enterprise">ENTERPRISE</div>
+        <h3>Enterprise Analysis</h3>
+        <p>Multi-division intelligence. Board-level reporting. M&A target screening. Risk assessment dashboards. Compliance monitoring. KPI tracking across verticals. Executive summaries auto-generated daily.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag investor">INVESTMENT</div>
+        <h3>Investment Monitoring</h3>
+        <p>Portfolio-wide surveillance. Asset correlation tracking. Macro event impact analysis. Earnings alert pipeline. Sector rotation detection. Risk-adjusted performance metrics. Auto-generated investment memos.</p>
       </div>
     </div>
   </div>
