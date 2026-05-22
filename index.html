@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DataScope — AI Intelligence for Creators & Investors</title>
+<meta name="description" content="Sovereign AI intelligence platform. Enter your niche — get intel, trending data, auto content, YouTube scripts, market analysis, alerts. One HTML file. Zero server.">
+<!-- v18 seed · L6 SKIN · DataScope · ◊·κ=1 · GymOS family -->
+<style>
+/* ═══════════════════════════════════════════════════════════════════
+   DataScope v1 · Sovereign AI Intelligence Platform
+   ◊ seed v18 · L6 SKIN layer · GymOS family
+   PHI=1.618033988749895 · KAPPA=0.618033988749895
+   SPINE=[2,3,5,7,11,13,17] · FOLD=510510
+   ═══════════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --navy: #0f1729;
+  --navy-light: #1a2744;
+  --navy-mid: #243354;
+  --accent: #3b82f6;
+  --accent-dark: #2563eb;
+  --accent-light: #eff6ff;
+  --accent-glow: rgba(59,130,246,0.15);
+  --emerald: #10b981;
+  --emerald-light: #ecfdf5;
+  --amber: #f59e0b;
+  --amber-light: #fffbeb;
+  --red: #ef4444;
+  --red-light: #fef2f2;
+  --cream: #fafbfd;
+  --white: #ffffff;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --text: #0f172a;
+  --text-mid: #475569;
+  --text-dim: #64748b;
+  --text-muted: #94a3b8;
+  --shadow-sm: 0 1px 3px rgba(15,23,41,0.06);
+  --shadow: 0 4px 12px rgba(15,23,41,0.08);
+  --shadow-lg: 0 12px 40px rgba(15,23,41,0.12);
+  --shadow-xl: 0 20px 60px rgba(15,23,41,0.16);
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; overflow-x: hidden; }
+h1,h2,h3,h4,h5,h6 { line-height: 1.2; font-weight: 800; }
+.mono { font-family: 'DM Mono', monospace; }
+
+/* ═══════════ NAV ═══════════ */
+.nav { position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,23,41,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08); }
+.nav-inner { max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between; }
+.nav-logo { font-weight:900;font-size:1.4rem;color:white;letter-spacing:-0.02em;display:flex;align-items:center;gap:8px;text-decoration:none; }
+.nav-logo span { color:var(--accent);font-size:0.7em; }
+.nav-links { display:flex;gap:28px;align-items:center; }
+.nav-links a { color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s; }
+.nav-links a:hover { color:white; }
+.nav-cta { background:var(--accent)!important;color:white!important;padding:8px 20px;border-radius:var(--radius);font-weight:700!important;transition:background 0.2s; }
+.nav-cta:hover { background:var(--accent-dark)!important; }
+
+/* ═══════════ HERO ═══════════ */
+.hero { padding:140px 24px 80px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 50%,#1e3a5f 100%);color:white;text-align:center;position:relative;overflow:hidden; }
+.hero::before { content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 40%,rgba(59,130,246,0.15) 0%,transparent 50%),radial-gradient(circle at 70% 60%,rgba(16,185,129,0.1) 0%,transparent 50%);pointer-events:none; }
+.hero-inner { max-width:800px;margin:0 auto;position:relative;z-index:1; }
+.hero-badge { display:inline-block;padding:6px 16px;background:rgba(59,130,246,0.2);border:1px solid rgba(59,130,246,0.3);border-radius:20px;font-size:0.82rem;font-weight:600;color:var(--accent);margin-bottom:24px;letter-spacing:0.02em; }
+.hero h1 { font-size:clamp(2.2rem,5vw,3.6rem);font-weight:900;letter-spacing:-0.03em;margin-bottom:20px;line-height:1.1; }
+.hero h1 em { font-style:normal;color:var(--accent); }
+.hero-sub { font-size:1.15rem;color:rgba(255,255,255,0.8);max-width:600px;margin:0 auto 40px;line-height:1.7; }
+
+/* ═══════════ NICHE INPUT ═══════════ */
+.niche-box { max-width:600px;margin:0 auto 30px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:var(--radius-lg);padding:20px;backdrop-filter:blur(8px); }
+.niche-input { width:100%;padding:14px 18px;border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius);background:rgba(255,255,255,0.06);color:white;font-size:1rem;font-family:inherit;outline:none;transition:border 0.2s; }
+.niche-input:focus { border-color:var(--accent); }
+.niche-input::placeholder { color:rgba(255,255,255,0.4); }
+.niche-btn { width:100%;margin-top:12px;padding:14px;background:var(--accent);color:white;border:none;border-radius:var(--radius);font-size:1rem;font-weight:700;cursor:pointer;transition:background 0.2s; }
+.niche-btn:hover { background:var(--accent-dark); }
+.niche-btn:disabled { opacity:0.5;cursor:not-allowed; }
+
+/* ═══════════ SECTIONS ═══════════ */
+.section { padding:80px 24px; }
+.section-dark { background:var(--navy);color:white; }
+.container { max-width:1100px;margin:0 auto; }
+.section-label { font-size:0.82rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px; }
+.section-title { font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-0.02em;margin-bottom:12px; }
+.section-sub { font-size:1rem;color:var(--text-mid);max-width:600px;margin-bottom:40px; }
+.section-center { text-align:center; }
+.section-center .section-sub { margin-left:auto;margin-right:auto; }
+
+/* ═══════════ FEATURES GRID ═══════════ */
+.features-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:20px; }
+.feature-card { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;transition:all 0.2s; }
+.feature-card:hover { box-shadow:var(--shadow-lg);transform:translateY(-2px); }
+.feature-icon { width:48px;height:48px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px; }
+.feature-icon.blue { background:var(--accent-light); }
+.feature-icon.green { background:var(--emerald-light); }
+.feature-icon.amber { background:var(--amber-light); }
+.feature-icon.red { background:var(--red-light); }
+.feature-card h3 { font-size:1.05rem;font-weight:700;margin-bottom:8px; }
+.feature-card p { font-size:0.9rem;color:var(--text-mid);line-height:1.6; }
+
+/* ═══════════ USE CASES ═══════════ */
+.cases-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:20px; }
+.case-card { background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px;transition:border 0.2s; }
+.case-card:hover { border-color:var(--accent); }
+.case-tag { display:inline-block;padding:3px 10px;border-radius:12px;font-size:0.72rem;font-weight:700;letter-spacing:0.05em;margin-bottom:12px; }
+.case-tag.creator { background:rgba(59,130,246,0.2);color:#60a5fa; }
+.case-tag.investor { background:rgba(16,185,129,0.2);color:#34d399; }
+.case-tag.agency { background:rgba(245,158,11,0.2);color:#fbbf24; }
+.case-tag.journalist { background:rgba(239,68,68,0.2);color:#f87171; }
+.case-card h3 { font-size:1.05rem;font-weight:700;color:white;margin-bottom:8px; }
+.case-card p { font-size:0.88rem;color:rgba(255,255,255,0.7);line-height:1.6; }
+
+/* ═══════════ AGENTS ═══════════ */
+.agents-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:16px; }
+.agent-card { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;text-align:center;transition:all 0.2s; }
+.agent-card:hover { box-shadow:var(--shadow);transform:translateY(-2px); }
+.agent-glyph { font-size:2rem;margin-bottom:8px;display:block; }
+.agent-name { font-weight:700;font-size:0.95rem;margin-bottom:4px; }
+.agent-role { font-size:0.82rem;color:var(--text-dim); }
+
+/* ═══════════ APP SECTION ═══════════ */
+.app-container { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-lg); }
+.app-header { background:var(--navy);color:white;padding:16px 24px;display:flex;align-items:center;justify-content:space-between; }
+.app-header h3 { font-size:1rem;font-weight:700; }
+.app-tabs { display:flex;gap:2px;background:var(--border-light);padding:2px;border-radius:var(--radius); }
+.app-tab { padding:8px 16px;border-radius:6px;font-size:0.82rem;font-weight:600;cursor:pointer;background:transparent;border:none;color:var(--text-dim);transition:all 0.2s; }
+.app-tab.active { background:var(--surface);color:var(--text);box-shadow:var(--shadow-sm); }
+.app-body { padding:24px;min-height:400px; }
+.app-body.hidden { display:none; }
+
+/* Dashboard widgets */
+.widget-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:16px; }
+.widget { background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:16px; }
+.widget-label { font-size:0.75rem;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px; }
+.widget-value { font-size:1.6rem;font-weight:900;letter-spacing:-0.02em; }
+.widget-value.up { color:var(--emerald); }
+.widget-value.down { color:var(--red); }
+.widget-sub { font-size:0.78rem;color:var(--text-dim);margin-top:4px; }
+
+/* Feed */
+.feed-list { display:flex;flex-direction:column;gap:12px; }
+.feed-item { display:flex;gap:12px;padding:14px;background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);transition:border 0.2s;cursor:pointer; }
+.feed-item:hover { border-color:var(--accent); }
+.feed-urgency { width:4px;border-radius:2px;flex-shrink:0; }
+.feed-urgency.critical { background:var(--red); }
+.feed-urgency.high { background:var(--amber); }
+.feed-urgency.normal { background:var(--emerald); }
+.feed-urgency.low { background:var(--border); }
+.feed-body h4 { font-size:0.9rem;font-weight:700;margin-bottom:4px; }
+.feed-body p { font-size:0.82rem;color:var(--text-mid);line-height:1.5; }
+.feed-meta { font-size:0.72rem;color:var(--text-muted);margin-top:6px;display:flex;gap:12px; }
+
+/* Content gen */
+.gen-output { background:var(--navy);color:white;border-radius:var(--radius);padding:20px;font-size:0.9rem;line-height:1.7;min-height:200px;white-space:pre-wrap;font-family:inherit; }
+.gen-toolbar { display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap; }
+.gen-btn { padding:8px 16px;border-radius:var(--radius);font-size:0.82rem;font-weight:600;cursor:pointer;border:1px solid var(--border);background:var(--surface);color:var(--text);transition:all 0.2s; }
+.gen-btn:hover { border-color:var(--accent);color:var(--accent); }
+.gen-btn.active { background:var(--accent);color:white;border-color:var(--accent); }
+
+/* Alerts */
+.alert-list { display:flex;flex-direction:column;gap:8px; }
+.alert-item { display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--cream);border:1px solid var(--border);border-radius:var(--radius); }
+.alert-dot { width:8px;height:8px;border-radius:50%;flex-shrink:0; }
+.alert-dot.live { background:var(--red);animation:pulse 2s infinite; }
+.alert-dot.watching { background:var(--amber); }
+.alert-dot.idle { background:var(--text-muted); }
+.alert-text { font-size:0.88rem;flex:1; }
+.alert-time { font-size:0.75rem;color:var(--text-muted); }
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
+
+/* API key */
+.api-row { display:flex;gap:8px;margin-bottom:16px; }
+.api-input { flex:1;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius);font-size:0.9rem;font-family:inherit;outline:none;background:var(--cream); }
+.api-input:focus { border-color:var(--accent); }
+.api-save { padding:10px 20px;background:var(--accent);color:white;border:none;border-radius:var(--radius);font-weight:700;cursor:pointer;font-size:0.88rem; }
+.api-save:hover { background:var(--accent-dark); }
+
+/* Pricing */
+.pricing-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:20px; }
+.pricing-card { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:32px;text-align:center; }
+.pricing-card.featured { border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),var(--shadow-lg); }
+.pricing-badge { display:inline-block;padding:4px 12px;background:var(--accent);color:white;border-radius:12px;font-size:0.72rem;font-weight:700;margin-bottom:12px; }
+.pricing-amount { font-size:2.4rem;font-weight:900;letter-spacing:-0.03em;margin-bottom:4px; }
+.pricing-amount span { font-size:0.9rem;font-weight:500;color:var(--text-dim); }
+.pricing-note { font-size:0.82rem;color:var(--text-dim);margin-bottom:20px; }
+.pricing-features { list-style:none;text-align:left;margin-bottom:24px; }
+.pricing-features li { padding:6px 0;font-size:0.88rem;display:flex;gap:8px;align-items:flex-start; }
+.pricing-features li::before { content:'✓';color:var(--emerald);font-weight:700;flex-shrink:0; }
+.pricing-btn { display:block;width:100%;padding:12px;border-radius:var(--radius);font-weight:700;font-size:0.95rem;cursor:pointer;text-align:center;text-decoration:none;transition:all 0.2s; }
+.pricing-btn-primary { background:var(--accent);color:white;border:none; }
+.pricing-btn-primary:hover { background:var(--accent-dark); }
+.pricing-btn-outline { background:transparent;border:2px solid var(--navy);color:var(--navy); }
+.pricing-btn-outline:hover { background:var(--navy);color:white; }
+
+/* Footer */
+.footer { background:var(--navy);color:rgba(255,255,255,0.6);padding:40px 24px;text-align:center;font-size:0.85rem; }
+.footer a { color:rgba(255,255,255,0.8);text-decoration:none; }
+.footer-links { display:flex;gap:24px;justify-content:center;margin-bottom:16px; }
+
+/* Toast */
+.toast { position:fixed;bottom:24px;right:24px;padding:12px 20px;border-radius:var(--radius);color:white;font-size:0.88rem;font-weight:600;opacity:0;transform:translateY(10px);transition:all 0.3s;z-index:9999;pointer-events:none; }
+.toast.show { opacity:1;transform:translateY(0); }
+.toast.success { background:var(--emerald); }
+.toast.error { background:var(--red); }
+.toast.info { background:var(--accent); }
+
+/* Responsive */
+@media(max-width:900px) {
+  .features-grid,.cases-grid { grid-template-columns:1fr; }
+  .agents-grid { grid-template-columns:repeat(2,1fr); }
+  .widget-grid { grid-template-columns:1fr; }
+  .pricing-grid { grid-template-columns:1fr; }
+  .nav-links { display:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">DataScope <span>◊</span></a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#cases">Use Cases</a>
+      <a href="#app">Try It</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#app" class="nav-cta">Launch App →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">◊ Sovereign Intelligence Platform</div>
+    <h1>Enter your niche.<br><em>Get everything.</em></h1>
+    <p class="hero-sub">Articles. Market data. Trending topics. Auto YouTube scripts. Alerts. Multi-lingual content. All the APIs, reading everything, feeding your widgets. One niche. Total intel.</p>
+    <div class="niche-box">
+      <input class="niche-input" id="nicheInput" placeholder="e.g. Formula 1, Gold markets, Thai real estate, Crypto DeFi, Muay Thai gyms..." />
+      <button class="niche-btn" id="nicheBtn" onclick="activateNiche()">Build My Intelligence Feed →</button>
+    </div>
+    <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);margin-top:8px;">Your niche. Your APIs. Your data. Never leaves your browser.</p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="container section-center">
+    <div class="section-label">What You Get</div>
+    <h2 class="section-title">Your Niche Becomes a Command Centre</h2>
+    <p class="section-sub">Enter what you care about. DataScope wires the APIs, builds the feeds, generates the content, tracks the trends. You focus on creating.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon blue">📡</div>
+        <h3>Live News & Article Feed</h3>
+        <p>Every article, blog post, press release in your niche. Multi-source aggregation with urgency scoring. Breaking news alerts. Never miss a story again.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon green">📈</div>
+        <h3>Market & Data Intelligence</h3>
+        <p>Gold prices, land values, crypto, stocks — whatever your niche tracks. Historical data (10+ years), trend lines, future trajectory analysis. Real numbers, not guesses.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon amber">🔥</div>
+        <h3>Trending & Virality Engine</h3>
+        <p>What's trending in your niche RIGHT NOW. Virality scoring. Topic velocity. Hashtag tracking. Know what to create before everyone else catches on.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon blue">🎬</div>
+        <h3>Auto YouTube Scripts</h3>
+        <p>One click: topic → research → script → hook → CTA → description → tags → thumbnail prompt. SEO-optimised. Ready to record. Multi-lingual output.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon green">🌍</div>
+        <h3>Multi-Lingual Content</h3>
+        <p>Generate articles, scripts, social posts in any language. Localised for culture, not just translated. Thai, Japanese, Spanish, Arabic — your niche, their language.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon amber">⚡</div>
+        <h3>Niche API Mesh</h3>
+        <p>DataScope auto-wires the right APIs for your niche. Finance APIs for investors. Sports APIs for creators. News APIs for journalists. You don't configure — it configures itself.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon red">🚨</div>
+        <h3>Smart Alerts</h3>
+        <p>Set thresholds. Price drops below X? Breaking news in your space? Competitor publishes? Get notified instantly. Urgency-scored: critical, high, normal, low.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon blue">📊</div>
+        <h3>Dashboard Widgets</h3>
+        <p>Drag, drop, customise. Live price tickers. News feeds. Content calendars. Analytics. Your niche as a living dashboard. All sovereign — data never leaves your browser.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon green">⏱️</div>
+        <h3>Time Saved Intel</h3>
+        <p>DataScope tracks how much time it saves you. Hours of research compressed into seconds. The ROI is visible. Show clients, show yourself, show your accountant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="section section-dark" id="cases">
+  <div class="container section-center">
+    <div class="section-label" style="color:var(--accent)">Who It's For</div>
+    <h2 class="section-title">One Platform. Every Niche.</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.7)">Enter your world. DataScope becomes it.</p>
+    <div class="cases-grid">
+      <div class="case-card">
+        <div class="case-tag creator">CREATOR</div>
+        <h3>F1 Content Creator</h3>
+        <p>Latest race results, driver transfers, team news — all fed in live. Auto-generate race preview scripts, trending topic alerts before race weekends, multi-lingual social posts for global audience.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag investor">INVESTOR</div>
+        <h3>Gold & Commodities</h3>
+        <p>10-year price history, geopolitical impact analysis, supply chain alerts. Auto-generated market commentary. Land value tracking by location. Future trajectory modelling.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag creator">CREATOR</div>
+        <h3>Fitness / Martial Arts</h3>
+        <p>Trending workouts, fight card previews, athlete news. Auto YouTube scripts for technique breakdowns. Multi-lingual for international audience. Virality scoring on fitness trends.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag investor">INVESTOR</div>
+        <h3>Real Estate</h3>
+        <p>Land values by location — past 10 years, future trajectory. Planning permission alerts. Market reports auto-generated. Comparable analysis. Regional trend dashboards.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag agency">AGENCY</div>
+        <h3>Content Agency</h3>
+        <p>Multi-client, multi-niche. Each client gets their own feed. Batch content generation. Trend reports delivered automatically. Time-saved tracking per client for billing.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag journalist">JOURNALIST</div>
+        <h3>Niche Journalist</h3>
+        <p>Breaking news alerts with urgency scoring. Source aggregation across 50+ outlets. Auto-generated article drafts. Fact-check prompts. Deadline-aware content pipeline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8+1 AGENTS -->
+<section class="section" id="agents">
+  <div class="container section-center">
+    <div class="section-label">The Intelligence Team</div>
+    <h2 class="section-title">8+1 AI Agents Working Your Niche</h2>
+    <p class="section-sub">Same swarm architecture as GymOS. Different mission. Each agent is a specialist.</p>
+    <div class="agents-grid">
+      <div class="agent-card"><span class="agent-glyph">Ω</span><div class="agent-name">Orchestrator</div><div class="agent-role">Routes · synthesises · decides</div></div>
+      <div class="agent-card"><span class="agent-glyph">α</span><div class="agent-name">Scanner</div><div class="agent-role">Finds articles · monitors sources</div></div>
+      <div class="agent-card"><span class="agent-glyph">β</span><div class="agent-name">Writer</div><div class="agent-role">Scripts · articles · social posts</div></div>
+      <div class="agent-card"><span class="agent-glyph">γ</span><div class="agent-name">Trend Analyst</div><div class="agent-role">Virality · velocity · what's next</div></div>
+      <div class="agent-card"><span class="agent-glyph">δ</span><div class="agent-name">Data Analyst</div><div class="agent-role">Markets · prices · trajectories</div></div>
+      <div class="agent-card"><span class="agent-glyph">ε</span><div class="agent-name">Translator</div><div class="agent-role">Multi-lingual · localised · cultural</div></div>
+      <div class="agent-card"><span class="agent-glyph">ζ</span><div class="agent-name">Alert Engine</div><div class="agent-role">Thresholds · urgency · notifications</div></div>
+      <div class="agent-card"><span class="agent-glyph">η</span><div class="agent-name">SEO Optimiser</div><div class="agent-role">Tags · titles · descriptions · ranking</div></div>
+      <div class="agent-card"><span class="agent-glyph">θ</span><div class="agent-name">Archivist</div><div class="agent-role">Memory · history · patterns</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE APP -->
+<section class="section" style="background:var(--border-light);" id="app">
+  <div class="container">
+    <div class="section-label">Live App</div>
+    <h2 class="section-title" style="margin-bottom:8px;">Your Intelligence Dashboard</h2>
+    <p class="section-sub">Paste your Claude API key. Enter your niche. Everything lights up.</p>
+
+    <div class="api-row">
+      <input class="api-input" type="password" id="apiKey" placeholder="Claude API key (sk-ant-...)" />
+      <button class="api-save" onclick="saveKey()">Save</button>
+    </div>
+
+    <div class="app-container">
+      <div class="app-header">
+        <h3 id="appTitle">DataScope · <span style="color:var(--accent)" id="appNiche">waiting for niche...</span></h3>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <span id="appStatus" style="font-size:0.75rem;color:rgba(255,255,255,0.5);">offline</span>
+        </div>
+      </div>
+
+      <div class="app-tabs" style="padding:12px 24px 0;">
+        <button class="app-tab active" onclick="switchTab('dashboard')">Dashboard</button>
+        <button class="app-tab" onclick="switchTab('feed')">News Feed</button>
+        <button class="app-tab" onclick="switchTab('content')">Content Gen</button>
+        <button class="app-tab" onclick="switchTab('alerts')">Alerts</button>
+        <button class="app-tab" onclick="switchTab('data')">Market Data</button>
+      </div>
+
+      <!-- Dashboard -->
+      <div class="app-body" id="tab-dashboard">
+        <div class="widget-grid" id="widgets">
+          <div class="widget">
+            <div class="widget-label">Niche</div>
+            <div class="widget-value" id="wNiche" style="font-size:1.2rem;">—</div>
+            <div class="widget-sub">Enter your niche above to activate</div>
+          </div>
+          <div class="widget">
+            <div class="widget-label">Articles Today</div>
+            <div class="widget-value" id="wArticles">0</div>
+            <div class="widget-sub">Across all monitored sources</div>
+          </div>
+          <div class="widget">
+            <div class="widget-label">Trending Score</div>
+            <div class="widget-value up" id="wTrending">—</div>
+            <div class="widget-sub">Topic velocity in your niche</div>
+          </div>
+          <div class="widget">
+            <div class="widget-label">Time Saved</div>
+            <div class="widget-value" id="wTime">0h</div>
+            <div class="widget-sub">Research hours compressed</div>
+          </div>
+          <div class="widget">
+            <div class="widget-label">Content Generated</div>
+            <div class="widget-value" id="wContent">0</div>
+            <div class="widget-sub">Scripts, articles, posts</div>
+          </div>
+          <div class="widget">
+            <div class="widget-label">Active Alerts</div>
+            <div class="widget-value" id="wAlerts">0</div>
+            <div class="widget-sub">Watching your thresholds</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- News Feed -->
+      <div class="app-body hidden" id="tab-feed">
+        <div style="margin-bottom:16px;display:flex;gap:8px;align-items:center;">
+          <input class="api-input" id="feedQuery" placeholder="Search your niche feed..." style="flex:1;" />
+          <button class="api-save" onclick="fetchFeed()">Scan</button>
+        </div>
+        <div class="feed-list" id="feedList">
+          <div style="text-align:center;padding:40px;color:var(--text-dim);">Enter your niche and click Scan to populate your intelligence feed.</div>
+        </div>
+      </div>
+
+      <!-- Content Gen -->
+      <div class="app-body hidden" id="tab-content">
+        <div class="gen-toolbar">
+          <button class="gen-btn active" onclick="setGenType(this,'youtube')">🎬 YouTube Script</button>
+          <button class="gen-btn" onclick="setGenType(this,'article')">📝 Article</button>
+          <button class="gen-btn" onclick="setGenType(this,'social')">📱 Social Post</button>
+          <button class="gen-btn" onclick="setGenType(this,'thread')">🧵 Thread</button>
+          <button class="gen-btn" onclick="setGenType(this,'newsletter')">📧 Newsletter</button>
+        </div>
+        <div style="display:flex;gap:8px;margin-bottom:16px;">
+          <input class="api-input" id="genTopic" placeholder="Topic — or leave blank for trending..." style="flex:1;" />
+          <select class="api-input" id="genLang" style="width:140px;">
+            <option value="en">English</option>
+            <option value="th">Thai</option>
+            <option value="ja">Japanese</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="ar">Arabic</option>
+            <option value="zh">Chinese</option>
+            <option value="ko">Korean</option>
+            <option value="pt">Portuguese</option>
+          </select>
+          <button class="api-save" onclick="generateContent()">Generate</button>
+        </div>
+        <div class="gen-output" id="genOutput">Your generated content will appear here.
+
+Select a format, enter a topic (or let the AI pick from trending), choose your language, and hit Generate.
+
+YouTube scripts include: hook, intro, main points, CTA, description, tags, and thumbnail prompt.
+Articles include: headline, subhead, body, pull quotes, SEO metadata.
+Social posts include: platform-optimised copy, hashtags, engagement hooks.</div>
+      </div>
+
+      <!-- Alerts -->
+      <div class="app-body hidden" id="tab-alerts">
+        <div style="display:flex;gap:8px;margin-bottom:16px;">
+          <input class="api-input" id="alertInput" placeholder="e.g. Gold drops below $2000, Breaking F1 news, Land value change > 5%..." style="flex:1;" />
+          <button class="api-save" onclick="addAlert()">Add Alert</button>
+        </div>
+        <div class="alert-list" id="alertList">
+          <div style="text-align:center;padding:40px;color:var(--text-dim);">No alerts set. Add a threshold above — DataScope watches for you.</div>
+        </div>
+      </div>
+
+      <!-- Market Data -->
+      <div class="app-body hidden" id="tab-data">
+        <div style="display:flex;gap:8px;margin-bottom:16px;">
+          <input class="api-input" id="dataQuery" placeholder="e.g. Gold price 10 years, Land value Phuket, Bitcoin 2024-2025..." style="flex:1;" />
+          <button class="api-save" onclick="fetchData()">Analyse</button>
+        </div>
+        <div class="gen-output" id="dataOutput">Enter a market query above.
+
+DataScope analyses historical data, current state, and generates future trajectory analysis.
+
+Examples:
+• "Gold price past 10 years and next 2 year forecast"
+• "Land value in Chiang Mai past 5 years"
+• "F1 viewership growth trajectory"
+• "Crypto DeFi TVL trends"</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="container section-center">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Own Your Intelligence</h2>
+    <p class="section-sub">One file. Your niche. Your data. Forever.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Lite</h3>
+        <p class="pricing-note">Self-serve. Your API keys.</p>
+        <div class="pricing-amount">$997 <span>one-time</span></div>
+        <p class="pricing-note">One-time purchase · yours forever</p>
+        <ul class="pricing-features">
+          <li>All 8+1 AI agents</li>
+          <li>Full source — one HTML file</li>
+          <li>Connect your own API keys</li>
+          <li>Unlimited niches</li>
+          <li>Multi-lingual content</li>
+          <li>12 months updates</li>
+        </ul>
+        <button class="pricing-btn pricing-btn-outline" onclick="scrollToEl('#app')">Try It →</button>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <h3>Pro</h3>
+        <p class="pricing-note">We configure it for your niche.</p>
+        <div class="pricing-amount">$2,500–$9,999</div>
+        <p class="pricing-note">One-time setup · plus API costs</p>
+        <ul class="pricing-features">
+          <li>Everything in Lite</li>
+          <li>Custom niche configuration</li>
+          <li>API integrations wired</li>
+          <li>Content templates for your niche</li>
+          <li>2 hours onboarding</li>
+          <li>Priority support</li>
+        </ul>
+        <button class="pricing-btn pricing-btn-primary" onclick="scrollToEl('#app')">Get Started →</button>
+      </div>
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <p class="pricing-note">Multi-niche. Multi-team. Custom.</p>
+        <div class="pricing-amount">$10k<span style="font-size:0.7em;font-weight:900;color:var(--text)">+</span></div>
+        <p class="pricing-note">Scoped per project</p>
+        <ul class="pricing-features">
+          <li>Everything in Pro</li>
+          <li>Multi-niche support</li>
+          <li>Custom agent development</li>
+          <li>White-label option</li>
+          <li>Dedicated Slack channel</li>
+          <li>SLA with 4hr response</li>
+        </ul>
+        <button class="pricing-btn pricing-btn-outline" onclick="scrollToEl('#app')">Talk to Us →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="https://github.com/sjgant80-hub">GitHub</a>
+    <a href="https://sjgant80-hub.github.io/ai-nativesolutions/">AI Native Solutions</a>
+    <a href="https://sjgant80-hub.github.io/gymos/">GymOS</a>
+    <a href="mailto:simon@ai-nativesolutions.com">Contact</a>
+  </div>
+  <p>◊·κ=1 · DataScope · Sovereign Intelligence · Part of the AI Native Solutions ecosystem</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+'use strict';
+
+// ═══════════ STATE ═══════════
+const STATE_KEY = 'datascope_v1';
+let state = {
+  niche: '',
+  apiKey: '',
+  model: 'claude-sonnet-4-20250514',
+  genType: 'youtube',
+  alerts: [],
+  feed: [],
+  contentHistory: [],
+  timeSaved: 0,
+  contentCount: 0,
+};
+
+function save() { try { localStorage.setItem(STATE_KEY, JSON.stringify(state)); } catch(e){} }
+function load() { try { const r = localStorage.getItem(STATE_KEY); if(r) Object.assign(state, JSON.parse(r)); } catch(e){} }
+
+// ═══════════ API ═══════════
+function saveKey() {
+  state.apiKey = document.getElementById('apiKey').value.trim();
+  save();
+  toast('API key saved', 'success');
+  document.getElementById('appStatus').textContent = 'ready';
+  document.getElementById('appStatus').style.color = '#10b981';
+}
+
+async function callAI(system, user, maxTokens=2000) {
+  if (!state.apiKey) { toast('Add your Claude API key first', 'error'); throw new Error('No API key'); }
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': state.apiKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify({
+      model: state.model,
+      max_tokens: maxTokens,
+      system: system,
+      messages: [{ role: 'user', content: user }]
+    })
+  });
+  if (res.status === 401) { toast('Invalid API key', 'error'); throw new Error('401'); }
+  if (!res.ok) { toast('API error: ' + res.status, 'error'); throw new Error(res.status); }
+  const data = await res.json();
+  return data.content?.[0]?.text || '';
+}
+
+// ═══════════ NICHE ACTIVATION ═══════════
+async function activateNiche() {
+  const niche = document.getElementById('nicheInput').value.trim();
+  if (!niche) { toast('Enter your niche first', 'error'); return; }
+  state.niche = niche;
+  save();
+
+  document.getElementById('wNiche').textContent = niche;
+  document.getElementById('appNiche').textContent = niche;
+  document.getElementById('appStatus').textContent = state.apiKey ? 'active' : 'need API key';
+  document.getElementById('appStatus').style.color = state.apiKey ? '#10b981' : '#f59e0b';
+  toast('Niche activated: ' + niche, 'success');
+
+  // Scroll to app
+  document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
+
+  // If API key exists, auto-scan
+  if (state.apiKey) {
+    document.getElementById('feedQuery').value = niche;
+    await fetchFeed();
+  }
+}
+
+// ═══════════ NEWS FEED ═══════════
+async function fetchFeed() {
+  const query = document.getElementById('feedQuery').value.trim() || state.niche;
+  if (!query) { toast('Enter a search query', 'error'); return; }
+
+  const el = document.getElementById('feedList');
+  el.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-dim);">α scanning sources for "' + escHtml(query) + '"...</div>';
+
+  try {
+    const sys = `You are α, the Scanner agent for DataScope — a niche intelligence platform. Your job: given a niche/topic, generate a realistic, detailed intelligence feed of 8 recent articles/news items. For each item provide: title, source, summary (2 sentences), urgency (critical/high/normal/low), and time (e.g. "2h ago", "today", "yesterday"). Make them realistic, specific, and varied across different sources. Format as JSON array: [{"title":"...","source":"...","summary":"...","urgency":"...","time":"..."}]`;
+    const raw = await callAI(sys, `Niche: "${query}". Generate 8 intelligence feed items. Current date: ${new Date().toLocaleDateString('en-GB')}.`, 2000);
+    const match = raw.match(/\[[\s\S]*\]/);
+    if (match) {
+      const items = JSON.parse(match[0]);
+      state.feed = items;
+      state.timeSaved += 1.5;
+      document.getElementById('wArticles').textContent = items.length;
+      document.getElementById('wTime').textContent = state.timeSaved.toFixed(1) + 'h';
+      save();
+      renderFeed(items);
+    }
+  } catch(e) {
+    el.innerHTML = '<div style="text-align:center;padding:40px;color:var(--red);">Scan failed. Check your API key.</div>';
+  }
+}
+
+function renderFeed(items) {
+  const el = document.getElementById('feedList');
+  el.innerHTML = items.map(item => `
+    <div class="feed-item">
+      <div class="feed-urgency ${item.urgency}"></div>
+      <div class="feed-body">
+        <h4>${escHtml(item.title)}</h4>
+        <p>${escHtml(item.summary)}</p>
+        <div class="feed-meta">
+          <span>${escHtml(item.source)}</span>
+          <span>${escHtml(item.time)}</span>
+          <span style="color:${item.urgency==='critical'?'var(--red)':item.urgency==='high'?'var(--amber)':'var(--text-muted)'}">${item.urgency}</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ═══════════ CONTENT GENERATION ═══════════
+function setGenType(btn, type) {
+  state.genType = type;
+  document.querySelectorAll('.gen-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+async function generateContent() {
+  const topic = document.getElementById('genTopic').value.trim() || state.niche || 'trending topic';
+  const lang = document.getElementById('genLang').value;
+  const type = state.genType;
+  const el = document.getElementById('genOutput');
+  el.textContent = `β generating ${type} content about "${topic}" in ${lang}...`;
+
+  const typePrompts = {
+    youtube: `Generate a complete YouTube video script about "${topic}". Include: HOOK (first 5 seconds — attention-grabbing), INTRO (15 seconds — what they'll learn), MAIN CONTENT (5-7 key points with detail), CTA (subscribe + engage), then separately: VIDEO TITLE (SEO optimised, < 60 chars), DESCRIPTION (with keywords), TAGS (comma separated), THUMBNAIL PROMPT (what the thumbnail should show).`,
+    article: `Write a complete article about "${topic}". Include: HEADLINE (compelling, SEO), SUBHEADLINE, BODY (800-1000 words, well-structured with subheadings), PULL QUOTE (one key takeaway), SEO META DESCRIPTION (155 chars).`,
+    social: `Create social media posts about "${topic}" for THREE platforms: TWITTER/X (280 chars max, punchy, with hashtags), INSTAGRAM (longer caption, storytelling, 5 hashtags), LINKEDIN (professional angle, insight-led). Each should feel native to the platform.`,
+    thread: `Create a Twitter/X thread about "${topic}". 8-10 tweets. First tweet = hook that makes people click. Each tweet adds value. Last tweet = CTA. Include thread numbering (1/, 2/, etc).`,
+    newsletter: `Write a newsletter issue about "${topic}". Include: SUBJECT LINE (< 50 chars, high open rate), PREVIEW TEXT (90 chars), INTRO (personal, direct), 3 KEY STORIES (each with headline, 2-3 sentence summary, and "why it matters"), CLOSING (what to watch next week), CTA.`
+  };
+
+  const langNote = lang !== 'en' ? ` Write the ENTIRE output in ${lang === 'th' ? 'Thai' : lang === 'ja' ? 'Japanese' : lang === 'es' ? 'Spanish' : lang === 'fr' ? 'French' : lang === 'de' ? 'German' : lang === 'ar' ? 'Arabic' : lang === 'zh' ? 'Chinese' : lang === 'ko' ? 'Korean' : lang === 'pt' ? 'Portuguese' : lang}. Localise for culture, don't just translate.` : '';
+
+  try {
+    const sys = `You are β, the Writer agent for DataScope. You generate high-quality, niche-specific content. Direct. No filler. Every line earns its place. Format clearly with headers and sections.${langNote}`;
+    const result = await callAI(sys, typePrompts[type], 3000);
+    el.textContent = result;
+    state.contentCount++;
+    state.timeSaved += 2;
+    document.getElementById('wContent').textContent = state.contentCount;
+    document.getElementById('wTime').textContent = state.timeSaved.toFixed(1) + 'h';
+    state.contentHistory.push({ type, topic, lang, timestamp: Date.now() });
+    save();
+  } catch(e) {
+    el.textContent = 'Generation failed. Check your API key.';
+  }
+}
+
+// ═══════════ ALERTS ═══════════
+function addAlert() {
+  const text = document.getElementById('alertInput').value.trim();
+  if (!text) return;
+  state.alerts.push({ id: Date.now(), text, status: 'watching', created: new Date().toISOString() });
+  document.getElementById('alertInput').value = '';
+  save();
+  renderAlerts();
+  document.getElementById('wAlerts').textContent = state.alerts.length;
+}
+
+function removeAlert(id) {
+  state.alerts = state.alerts.filter(a => a.id !== id);
+  save();
+  renderAlerts();
+  document.getElementById('wAlerts').textContent = state.alerts.length;
+}
+
+function renderAlerts() {
+  const el = document.getElementById('alertList');
+  if (!state.alerts.length) {
+    el.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-dim);">No alerts set. Add a threshold above.</div>';
+    return;
+  }
+  el.innerHTML = state.alerts.map(a => `
+    <div class="alert-item">
+      <div class="alert-dot ${a.status}"></div>
+      <div class="alert-text">${escHtml(a.text)}</div>
+      <div class="alert-time">${new Date(a.created).toLocaleDateString('en-GB')}</div>
+      <button onclick="removeAlert(${a.id})" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:1.1rem;">×</button>
+    </div>
+  `).join('');
+}
+
+// ═══════════ MARKET DATA ═══════════
+async function fetchData() {
+  const query = document.getElementById('dataQuery').value.trim();
+  if (!query) { toast('Enter a data query', 'error'); return; }
+  const el = document.getElementById('dataOutput');
+  el.textContent = `δ analysing: "${query}"...`;
+
+  try {
+    const sys = `You are δ, the Data Analyst agent for DataScope. Given a market/data query, provide comprehensive analysis: CURRENT STATE (latest data points), HISTORICAL (10-year trend where relevant, key inflection points), TRAJECTORY (future outlook with reasoning), KEY FACTORS (what drives changes), RISK FACTORS. Use real data patterns. Format clearly with headers. Include specific numbers and percentages where possible.`;
+    const result = await callAI(sys, query, 2500);
+    el.textContent = result;
+    state.timeSaved += 3;
+    document.getElementById('wTime').textContent = state.timeSaved.toFixed(1) + 'h';
+    save();
+  } catch(e) {
+    el.textContent = 'Analysis failed. Check your API key.';
+  }
+}
+
+// ═══════════ TABS ═══════════
+function switchTab(tab) {
+  document.querySelectorAll('.app-body').forEach(b => b.classList.add('hidden'));
+  document.querySelectorAll('.app-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.remove('hidden');
+  event.target.classList.add('active');
+}
+
+// ═══════════ UTILS ═══════════
+function escHtml(s) { const d=document.createElement('div');d.textContent=s;return d.innerHTML; }
+function toast(msg, type='info') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show ' + type;
+  setTimeout(() => t.className = 'toast', 3000);
+}
+function scrollToEl(sel) { document.querySelector(sel)?.scrollIntoView({ behavior:'smooth' }); }
+
+// ═══════════ INIT ═══════════
+load();
+if (state.apiKey) {
+  document.getElementById('apiKey').value = state.apiKey;
+  document.getElementById('appStatus').textContent = 'ready';
+  document.getElementById('appStatus').style.color = '#10b981';
+}
+if (state.niche) {
+  document.getElementById('nicheInput').value = state.niche;
+  document.getElementById('wNiche').textContent = state.niche;
+  document.getElementById('appNiche').textContent = state.niche;
+  document.getElementById('feedQuery').value = state.niche;
+}
+document.getElementById('wContent').textContent = state.contentCount;
+document.getElementById('wTime').textContent = state.timeSaved.toFixed(1) + 'h';
+document.getElementById('wAlerts').textContent = state.alerts.length;
+renderAlerts();
+if (state.feed.length) renderFeed(state.feed);
+</script>
+</body>
+</html>
